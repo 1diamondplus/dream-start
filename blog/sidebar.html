@@ -1,0 +1,177 @@
+<!-- <script type="text/javascript">  
+  (function($){  
+      $.fn.snow = function(options){  
+      var $flake = $('<div id="snowbox" />').css({'position': 'absolute','z-index':'9999', 'top': '-50px', 'cursor': 'pointer'}).html('❄'),  
+      documentHeight  = $(document).height(),  
+      documentWidth   = $(document).width(),  
+      defaults = {  
+          minSize     : 10,  
+          maxSize     : 20,  
+          newOn       : 1000,  
+          flakeColor  : "#FFFFFF" /* 此处可以定义雪花颜色，若要白色可以改为#FFFFFF */  
+      },  
+      options = $.extend({}, defaults, options);  
+      var interval= setInterval( function(){  
+      var startPositionLeft = Math.random() * documentWidth - 100,  
+      startOpacity = 0.5 + Math.random(),  
+      sizeFlake = options.minSize + Math.random() * options.maxSize,  
+      endPositionTop = documentHeight - 200,  
+      endPositionLeft = startPositionLeft - 500 + Math.random() * 500,  
+      durationFall = documentHeight * 10 + Math.random() * 5000;  
+      $flake.clone().appendTo('body').css({  
+          left: startPositionLeft,  
+          opacity: startOpacity,  
+          'font-size': sizeFlake,  
+          color: options.flakeColor  
+      }).animate({  
+          top: endPositionTop,  
+          left: endPositionLeft,  
+          opacity: 0.2  
+      },durationFall,'linear',function(){  
+          $(this).remove()  
+      });  
+      }, options.newOn);  
+      };  
+  })(jQuery);  
+  $(function(){  
+      $.fn.snow({   
+          minSize: 5, /* 定义雪花最小尺寸 */  
+          maxSize: 80,/* 定义雪花最大尺寸 */  
+          newOn: 200  /* 定义密集程度，数字越小越密集 */  
+      });  
+  });  
+</script>  -->
+<script type="text/javascript">
+    window.cnblogsConfig = {
+      animate:{
+        homeBanner:{
+          enable:true,
+          options:{
+            radius:15,
+            color:'rgba(0,254,255, .2)',
+            clearOffset:0.7
+          }
+        },
+        articleBanner:{
+          enable:true
+        },
+        background:{
+          enable:true,
+          options: {
+              colorSaturation: "60%",
+              colorBrightness: "50%",
+              colorAlpha: 0.5,
+              colorCycleSpeed: 10,
+              verticalPosition: "random",
+              horizontalSpeed: 200,
+              ribbonCount: 3,
+              strokeSize: 0,
+              parallaxAmount: -0.2,
+              animateSections: true
+          }
+        },
+        bannerImages:{
+            enable: true, // 是否开启
+                options: { 
+                itemNum: 10, // 图片拆分成几列
+                current: 0, // 初始图片的下标，如果为负数则为随机
+                sort: 1, // 1 代表每次向下加载一个图片，-1 代表每次向上加载一个图片
+                time: 5000 // 每次切换间隔时间，单位：毫秒
+            }
+        },
+        backgroundMouse:{
+          enable:false
+        },
+        mouse:{ 
+            enable: true, // 是否开启
+            options: {
+              size: 8, // 中心圆点的大小，单位 px
+              sizeF: 18 // 外部边框的大小，单位 px
+            }
+        }
+      },
+      title:{
+          onblur:'别走嘛，快回来！'
+      },
+    switchDayNight: {
+        enable: true,
+        nightMode:false,
+        auto: {
+            enable: true,
+            dayHour:5,
+            nightHour:17,
+        }
+    },
+      progressBar:{
+        color:'#00eeff'
+      },
+      links:{
+        footer:[
+          ['Freedom','https://www.luogu.com.cn/user/531806'],
+          ['zzy','https://www.luogu.com.cn/user/715244'],
+          ['xzm','https://www.luogu.com.cn/user/600809'],
+          ['dalao','https://www.luogu.com.cn/user/535491'],
+          ['基友','https://www.luogu.com.cn/user/761726'],
+          ['博皮来源','https://bndong.github.io/Cnblogs-Theme-SimpleMemory/v2/#/']
+        ]
+      },
+      footer:{
+        text:{
+          iconFont:{
+            icon:'icon-xl',
+            color:'red',
+            fontSize:'32px'
+          },
+          left:'追就要用Dijkstra，Floyd是海王的专利，追到了就用合适容器储存',
+          right:'求最大公因数就要用短除法，共同进步，相互包容'
+        },
+        style:2,
+      },
+      info: {
+        name: 'diamond_plus', // 用户名
+        startDate: '2021-08-02', // 入园时间，年-月-日。入园时间查看方法：鼠标停留园龄时间上，会显示入园时间
+        avatar: 'https://cdn.luogu.com.cn/upload/image_hosting/o09ek7eu.png', // 用户头像
+        blogIcon:'https://i2.100024.xyz/2022/08/17/vlbju9.webp',
+      }, 
+      banner: {
+            home: {
+                background: [
+                    "https://cdn.luogu.com.cn/upload/image_hosting/o09ek7eu.png",
+                    "https://cdn.luogu.com.cn/upload/image_hosting/l1sii3jh.png",
+                    "https://cdn.luogu.com.cn/upload/image_hosting/4iq5p07c.png",
+                    // "https://img1.imgtp.com/2022/08/17/4EUYkHDk.png",//k
+                    "https://img1.imgtp.com/2022/08/17/bknuffff.png",//k
+                    "https://img1.imgtp.com/2022/08/17/061paF5Q.png",//k
+                    "https://img1.imgtp.com/2022/08/17/RMF58zWN.png",
+                    "https://img1.imgtp.com/2022/08/17/vqBSIez3.png",//k
+                ],
+            },
+            article:{
+              background:[
+                'https://img1.imgtp.com/2022/08/18/x9ZXnvDY.png'
+              ]
+            }
+        },
+      sidebar: {
+        infoBackground: 'https://i2.100024.xyz/2022/08/17/vlbju9.webp',
+        navList:[
+            ['csdn','https://blog.csdn.net/Diamond_plus?spm=1010.2135.3001.5343','icon-csdn'],
+            ['GitHub','https://github.com/1diamondplus','icon-github'],
+            ['luogu','https://www.luogu.com.cn/user/566168','icon-home2'],
+            ['codeforces','https://codeforces.com/profile/diamond_plus_plus','icon-codeforces'],
+            ['联系','https://msg.cnblogs.com/send/9-1-11-9-15-9','icon-logo'],
+            ['vjudge','https://vjudge.net/user/diamond_plus',' ']
+        ],
+        titleMsg:'能够驾驭成功的人往往先学会驾驭失败',
+        // customList:{
+        //   "":{
+        //     "data":[
+        //       ['ww','https://www.cnblogs.com/bndong/']
+        //     ]
+        //   }
+
+        // }
+          },
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/gh/BNDong/Cnblogs-Theme-SimpleMemory@v2.1.0/dist/simpleMemory.js" defer></script>
