@@ -3,7 +3,7 @@
 var a_idx = 0;
 jQuery(document).ready(function($) {
     $("body").click(function(e) {
-        var a = new Array("❤风里雨里满眼都是你❤","❤cyr❤","lkm","春心莫共花争发","一寸相思一寸灰","❤除了春天、爱情和樱花❤","❤why❤","❤love❤","❤rain❤","❤夜信❤","❤blueming❤","❤离别初体验❤");
+        var a = new Array("❤风里雨里满眼都是你❤","春心莫共花争发","一寸相思一寸灰","❤除了春天、爱情和樱花❤","❤why❤","❤love❤","❤rain❤","❤夜信❤","❤blueming❤","❤离别初体验❤");
         var $i = $("<span></span>").text(a[a_idx]);
         a_idx = (a_idx + 1) % a.length;
         var x = e.pageX,
